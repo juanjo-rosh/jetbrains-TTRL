@@ -31,8 +31,7 @@ distinguish a true (center, context) pair from $K$ randomly drawn "noise"
 pairs.  For a single training pair $(w_c, w_o)$:
 
 $$
-J = \log \sigma\!\left(\mathbf{u}_o^\top \mathbf{v}_c\right)
-  + \sum_{k=1}^{K} \log \sigma\!\left(-\mathbf{u}_k^\top \mathbf{v}_c\right)
+J = \log \sigma\!\left(\mathbf{u}_o^\top \mathbf{v}_c\right) + \sum_{k=1}^{K} \log \sigma\!\left(-\mathbf{u}_k^\top \mathbf{v}_c\right)
 $$
 
 **Interpretation as binary classification:**
@@ -47,9 +46,7 @@ Since we implement gradient **descent**, we minimise the **negated** objective:
 
 $$
 \boxed{
-\mathcal{L}
-= -\log \sigma\!\left(\mathbf{u}_o^\top \mathbf{v}_c\right)
-  - \sum_{k=1}^{K} \log \sigma\!\left(-\mathbf{u}_k^\top \mathbf{v}_c\right)
+\mathcal{L} = -\log \sigma\!\left(\mathbf{u}_o^\top \mathbf{v}_c\right) - \sum_{k=1}^{K} \log \sigma\!\left(-\mathbf{u}_k^\top \mathbf{v}_c\right)
 }
 $$
 
