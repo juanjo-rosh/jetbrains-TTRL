@@ -8,22 +8,12 @@ Entry-point script that orchestrates the full SGNS training pipeline:
 2.  Build vocabulary and preprocess      (vocab.py)
 3.  Initialise the SGNS model            (word2vec.py)
 4.  Run the training loop with:
-      • Mini-batch SGD
-      • Linear learning-rate decay
-      • Periodic loss logging
+    • Mini-batch SGD
+    • Linear learning-rate decay
+    • Periodic loss logging
 5.  Evaluate embedding quality (most-similar queries)
 6.  Save the trained embeddings to disk
 
-Usage
------
-    # Quick smoke-test with the built-in fallback corpus
-    python train.py
-
-    # Train on text8 (first 1 000 000 tokens)
-    python train.py --corpus text8 --max_tokens 1000000
-
-    # Full text8 training (≈ 17 M tokens, ~20 min on a modern CPU)
-    python train.py --corpus text8
 """
 
 from __future__ import annotations
